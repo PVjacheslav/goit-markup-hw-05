@@ -201,9 +201,12 @@ body {
   border-radius: 2px;
 }
 
+.active {
+  color: var(--ocean);
+}
+
 .menu-link.active::after {
   background-color: var(--ocean);
-  color: #404bbf; 
 }
 /* .menu-item:not(:last-child) {
   margin-right: 40px;
@@ -561,7 +564,6 @@ body {
   height: 100%;
 
   background-color: rgba(46, 47, 66, 0.4);
-  
 
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
