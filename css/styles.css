@@ -27,7 +27,7 @@ background: #FFFFFF
   /* Others */
   --indent: 24px;
   --items: 4;
-  --anim: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 h1,
@@ -179,7 +179,7 @@ body {
   line-height: 1.5;
   color: var(--navy-blue);
 
-  transition: color var(--anim);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-link:hover,
@@ -217,12 +217,13 @@ body {
   display: flex;
   margin-left: auto;
 }
+
 .contact-list {
   font-weight: 400;
   line-height: 1.5;
 
   color: var(--slate);
-  transition: color var(--anim);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-list:hover,
@@ -412,7 +413,7 @@ body {
   color: var(--cloud);
   background-color: var(--iris);
   border-radius: 50%;
-  transition: background-color var(--anim);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-link:hover,
@@ -453,7 +454,7 @@ body {
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* transition: color var(--anim)  */
+  
 }
 
 .customer-link:hover,
@@ -536,7 +537,7 @@ body {
   color: var(--cloud);
   background-color: var(--iris);
   border-radius: 50%;
-  transition: background-color var(--anim);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-socials-link:hover,
@@ -727,7 +728,7 @@ body {
 
 .portfolio-link {
   display: block;
-  transition: box-shadow var(--anim);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-link:hover,
