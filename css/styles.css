@@ -199,11 +199,11 @@ body {
   height: 4px;
 
   border-radius: 2px;
-  /* background-color: var(--ocean); */
 }
 
 .menu-link.active::after {
   background-color: var(--ocean);
+  color: #404bbf; 
 }
 /* .menu-item:not(:last-child) {
   margin-right: 40px;
@@ -282,7 +282,7 @@ body {
   background-color: var(--iris);
   cursor: pointer;
 
-  transition: color var(--anim), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -561,12 +561,10 @@ body {
   height: 100%;
 
   background-color: rgba(46, 47, 66, 0.4);
-  z-index: 100;
+  
 
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* transition: opacity var(--anim), visibility var(--anim); */
-  /* transition-delay: var(--anim); */
 }
 
 .backdrope.is-hidden {
@@ -592,7 +590,6 @@ body {
   border-radius: 4px;
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* transition: transform var(--anim); */
 }
 
 .backdrope.is-hidden .modal {
@@ -616,6 +613,7 @@ body {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--cornflower);
+  color: var(--navy-blue);
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -623,12 +621,13 @@ body {
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
+  color: var(--white);
   background-color: var(--ocean);
   border: none;
 }
 
 .modal-close-icon {
-  fill: var(--navy-blue);
+  fill: currentColor;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -693,20 +692,6 @@ body {
 
 /* Overlay */
 
-/* .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translateY(100%);
-
-  padding: 40px 32px 0;
-  width: 100%;
-  height: 100%;
-
-  background-color: rgba(77, 90, 229, 1);
-  transition: transform var(--anim);
-} */
-
 .overlay-text {
   position: absolute;
   top: 0;
@@ -727,8 +712,8 @@ body {
   color: var(--cloud);
 }
 
-.portfolio-link:hover .overlay,
-.portfolio-link:focus .overlay {
+.portfolio-link:hover .overlay-text,
+.portfolio-link:focus .overlay-text {
   transform: translateY(0%);
 }
 
