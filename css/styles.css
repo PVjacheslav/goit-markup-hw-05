@@ -558,28 +558,42 @@ body {
 
   background-color: rgba(255, 255, 255, 0.3);
   z-index: 100;
+
+  transition: opacity var(--anim), visibility var(--anim);
+  /* transition-delay: var(--anim); */
 }
 
-.is-hidden {
+.backdrope.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition-delay: 500ms;
 }
 
 .modal {
   position: absolute;
 
-  top: calc(50% - 288px);
-  left: calc(50% - 204px);
+  top: calc(50%);
+  left: calc(50%);
+  transform: translate(-50%, -50%);
 
   width: 408px;
   height: 576px;
 
   background-color: var(--dairy);
-  /* box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 2px 1px rgba(0, 0, 0, 0.2); */
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  transition: opacity var(--anim), transform var(--anim);
 }
+
+.backdrope.is-hidden .modal {
+  opacity: 0;
+  transform: translate(-50%, -75%);
+  /* transition-delay: 250ms; */
+}
+
 .modal-close-btn {
   position: absolute;
   top: -12px;
@@ -642,8 +656,14 @@ body {
   background-color: var(--ocean);
 }
 
+.portfolio-list {
+  --items: 3;
+  row-gap: 48px;
+}
+
 .tumb-portfolio {
   position: relative;
+  overflow: hidden;
 }
 
 /* Overlay */
@@ -652,21 +672,23 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  transform: translateY(100%);
 
   padding: 40px 32px 0;
   width: 100%;
   height: 100%;
 
   background-color: rgba(77, 90, 229, 1);
+  transition: transform var(--anim);
 }
 
 .overlay-text {
   color: var(--cloud);
 }
 
-.portfolio-list {
-  --items: 3;
-  row-gap: 48px;
+.portfolio-link:hover .overlay,
+.portfolio-link:focus .overlay {
+  transform: translateY(0);
 }
 
 .portfolio-wrapper {
