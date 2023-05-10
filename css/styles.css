@@ -27,7 +27,6 @@ background: #FFFFFF
   /* Others */
   --indent: 24px;
   --items: 4;
-  
 }
 
 h1,
@@ -454,7 +453,6 @@ body {
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
 }
 
 .customer-link:hover,
@@ -621,7 +619,7 @@ body {
   color: var(--navy-blue);
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover,
